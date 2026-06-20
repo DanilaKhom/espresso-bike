@@ -1,88 +1,4 @@
-// Menu Dataset - Exact items, weights and prices from images
-const menuData = [
-  // ЧЁРНЫЙ КОФЕ
-  { name: 'Эспрессо', price: '200 ₽', weight: '34-46 г', desc: 'Классический насыщенный черный кофе.', category: 'black-coffee' },
-  { name: 'Фильтр кофе', price: '230 / 290 ₽', weight: '200 / 300 мл', desc: 'Кофе, заваренный капельным методом на зернах свежей обжарки.', category: 'black-coffee' },
-  { name: 'Американо', price: '200 ₽', weight: '160 мл', desc: 'Эспрессо с добавлением горячей воды.', category: 'black-coffee' },
-  { name: 'Лунго', price: '350 ₽', weight: '80 г', desc: 'Кофейный напиток с увеличенным временем экстракции.', category: 'black-coffee' },
-  { name: 'Hario V60', price: '350 ₽', weight: '250 мл', desc: 'Альтернативный метод заваривания, раскрывающий тонкие цветочные и ягодные ноты зерна.', category: 'black-coffee' },
-
-  // КОФЕ С МОЛОКОМ
-  { name: 'Капучино', price: '260 / 290 ₽', weight: '160 / 260 мл', desc: 'Классический кофейно-молочный напиток с шелковистой пенкой.', category: 'milk-coffee' },
-  { name: 'Флэт вайт', price: '260 ₽', weight: '200 мл', desc: 'Двойной эспрессо с добавлением горячего молока с тонким слоем пены.', category: 'milk-coffee' },
-  { name: 'Латте', price: '320 ₽', weight: '260 мл', desc: 'Мягкий кофейно-молочный напиток с нежной молочной пенкой.', category: 'milk-coffee' },
-
-  // РАФ КОФЕ (в категории кофе с молоком)
-  { name: 'Ванильный раф', price: '390 ₽', weight: '330 мл', desc: 'Нежный десертный кофе на сливках с натуральной ванилью.', category: 'milk-coffee' },
-  { name: 'Арахисовый раф', price: '390 ₽', weight: '330 мл', desc: 'Фирменный раф со вкусом ароматного арахиса.', category: 'milk-coffee' },
-  { name: 'Раф соленая карамель', price: '390 ₽', weight: '330 мл', desc: 'Сливочный раф с добавлением домашней соленой карамели.', category: 'milk-coffee' },
-  { name: 'Апельсиновый раф', price: '390 ₽', weight: '330 мл', desc: 'Освежающий сливочный раф с цитрусовыми нотами.', category: 'milk-coffee' },
-
-  // ЧАЙ
-  { name: 'Specialty чай на выбор', price: '390 / 550 ₽', weight: '0.3 / 0.5 л', desc: 'Specialty чай высшего качества от наших чайных партнеров.', category: 'tea-matcha' },
-  { name: 'Черный байховый чай', price: '200 / 350 ₽', weight: '0.3 / 0.5 л', desc: 'Классический черный чай с глубоким вкусом.', category: 'tea-matcha' },
-  { name: 'Зеленый китайский чай', price: '200 / 350 ₽', weight: '0.3 / 0.5 л', desc: 'Нежный зеленый чай с цветочными нотами.', category: 'tea-matcha' },
-  { name: 'Чай с марокканской мятой', price: '200 / 350 ₽', weight: '0.3 / 0.5 л', desc: 'Ароматный и успокаивающий мятный чай.', category: 'tea-matcha' },
-  { name: 'Иван-чай', price: '200 / 350 ₽', weight: '0.3 / 0.5 л', desc: 'Традиционный русский травяной напиток.', category: 'tea-matcha' },
-  { name: 'Гречишный чай', price: '200 / 350 ₽', weight: '0.3 / 0.5 л', desc: 'Популярный чай из татарской гречихи с печеньковым вкусом.', category: 'tea-matcha' },
-  { name: 'Мандариновый чай', price: '250 / 390 ₽', weight: '0.3 / 0.5 л', desc: 'Согревающий фруктовый чай с цитрусовой свежестью.', category: 'tea-matcha' },
-  { name: 'Облепиховый чай', price: '250 / 390 ₽', weight: '0.3 / 0.5 л', desc: 'Полезный согревающий чай со свежей облепихой.', category: 'tea-matcha' },
-
-  // МАТЧА
-  { name: 'Матча капучино', price: '290 ₽', weight: '260 мл', desc: 'Японский чай матча со взбитым молоком.', category: 'tea-matcha' },
-  { name: 'Матча латте', price: '320 ₽', weight: '260 мл', desc: 'Насыщенный напиток на основе пудры зеленого чая матча и молока.', category: 'tea-matcha' },
-  { name: 'Ice матча латте', price: '340 ₽', weight: '380 мл', desc: 'Освежающий матча латте со льдом.', category: 'tea-matcha' },
-
-  // ЗАВТРАКИ НЕСЛАДКИЕ
-  { name: 'Английский завтрак', price: '690 ₽', weight: 'весь день', desc: 'Глазунья с беконом, печеным картофелем бейби, томатами, фасолью, колбасками и ремесленным хлебом.', category: 'breakfasts' },
-  { name: 'Яйца бенедикт с лососем', price: '840 ₽', weight: 'весь день', desc: 'Яйца пашот с лососем слабой соли, авокадо и голландским соусом на нежной булочке бриошь.', category: 'breakfasts' },
-  { name: 'Драники с лососем', price: '520 ₽', weight: 'весь день', desc: 'Хрустящие картофельные драники с лососем слабой соли и сметанным соусом.', category: 'breakfasts' },
-  { name: 'Омлет с грибами', price: '520 ₽', weight: 'весь день', desc: 'Пышный омлет с грибами, сыром пармезан и домашним хлебом.', category: 'breakfasts' },
-  { name: 'Гречневые блинчики с лососем', price: '520 ₽', weight: 'весь день', desc: 'Гречневые блины со слабосоленым лососем и нежным творожным сыром.', category: 'breakfasts' },
-
-  // ЗАВТРАКИ СЛАДКИЕ
-  { name: 'Овсяная каша с мёдом и орехами', price: '280 ₽', weight: 'весь день', desc: 'Теплая овсяная каша с добавлением меда и смеси орехов.', category: 'breakfasts' },
-  { name: 'Овсяная каша на кокосовом молоке', price: '320 ₽', weight: 'весь день', desc: 'Полезная каша с добавлением свежего банана и лепестков миндаля.', category: 'breakfasts' },
-  { name: 'Творожная запеканка', price: '520 ₽', weight: 'весь день', desc: 'Нежная запеканка на кокосовых сливках.', category: 'breakfasts' },
-  { name: 'Сырники из фермерского творога', price: '520 ₽', weight: 'весь день', desc: 'Сырники из натурального творога со сметаной и сезонными фруктами.', category: 'breakfasts' },
-  { name: 'Панкейки с бананом', price: '520 ₽', weight: 'весь день', desc: 'Пышные панкейки с бананом и соленой карамелью.', category: 'breakfasts' },
-
-  // САЛАТЫ
-  { name: 'Тёплый салат с индейкой', price: '540 ₽', weight: 'порция', desc: 'Индейка, обжаренные цукини, болгарский перец и томаты.', category: 'mains-salads' },
-  { name: 'Салат с хрустящими баклажанами', price: '540 ₽', weight: 'порция', desc: 'Баклажаны, адыгейский сыр, соус сладкий чили.', category: 'mains-salads' },
-
-  // СУП
-  { name: 'Суп дня', price: '320 ₽', weight: 'порция', desc: 'Сытный и свежий суп от нашего шеф-повара. Уточняйте у бариста.', category: 'mains-salads' },
-
-  // ГОРЯЧЕЕ
-  { name: 'Пюре с фрикадельками', price: '590 ₽', weight: 'порция', desc: 'Нежное пюре с фрикадельками, брусничным и белым соусом.', category: 'mains-salads' },
-  { name: 'Паста с индейкой и грибами', price: '590 ₽', weight: 'порция', desc: 'Сытная паста в сливочном соусе с филе индейки и шампиньонами.', category: 'mains-salads' },
-  { name: 'Паста с соусом Альфредо и креветками', price: '740 ₽', weight: 'порция', desc: 'Паста с креветками и классическим соусом Альфредо.', category: 'mains-salads' },
-  { name: 'Паста Карбонара', price: '590 ₽', weight: 'порция', desc: 'Паста на белом вине со сливками, беконом и пармезаном.', category: 'mains-salads' },
-  { name: 'Овощная паста на растительных сливках', price: '520 ₽', weight: 'порция', desc: 'Паста с цукини, перцем, баклажанами на легких растительных сливках.', category: 'mains-salads' },
-
-  // СЭНДВИЧ-РОЛЛЫ
-  { name: 'Ролл с индейкой и шампиньонами', price: '450 ₽', weight: 'порция', desc: 'Ролл с индейкой, шампиньонами и сливочным творожным сыром.', category: 'sandwich-rolls' },
-  { name: 'Ролл с лососем', price: '650 ₽', weight: 'порция', desc: 'Пшеничный ролл со слабосоленым лососем и творожным сыром.', category: 'sandwich-rolls' },
-  { name: 'Буррито с говядиной', price: '450 ₽', weight: 'порция', desc: 'Сытный ролл в мексиканском стиле с говяжьим фаршем и фасолью.', category: 'sandwich-rolls' },
-  { name: 'Ролл с нутом и овощами карри', price: '420 ₽', weight: 'порция', desc: 'Нут, перец, цукини, вяленые томаты в пикантном соусе карри.', category: 'sandwich-rolls' },
-
-  // СМУЗИ И ДРУГОЕ
-  { name: 'Айс латте', price: '340 ₽', weight: '380 мл', desc: 'Классический кофейный напиток с молоком и льдом.', category: 'other-drinks' },
-  { name: 'Бамбл кофе', price: '390 ₽', weight: '380 мл', desc: 'Эспрессо с апельсиновым соком и карамельным сиропом.', category: 'other-drinks' },
-  { name: 'Эспрессо тоник', price: '360 ₽', weight: '380 мл', desc: 'Тонизирующее сочетание эспрессо, тоника и льда.', category: 'other-drinks' },
-  { name: 'Смузи манго-маракуйя', price: '440 ₽', weight: '380 мл', desc: 'Освежающий смузи из тропических фруктов.', category: 'other-drinks' },
-  { name: 'Манго шейк с чиа', price: '440 ₽', weight: '380 мл', desc: 'Кокосовый шейк с манго и суперфудом чиа.', category: 'other-drinks' },
-  { name: 'Смузи малина-банан', price: '440 ₽', weight: '380 мл', desc: 'Ягодный банановый смузи.', category: 'other-drinks' },
-  { name: 'Какао с зефирками', price: '390 ₽', weight: '260 мл', desc: 'Сладкое теплое какао с маршмеллоу.', category: 'other-drinks' },
-  { name: 'Молочный коктейль', price: '350 ₽', weight: '380 мл', desc: 'Прохладный классический коктейль с пломбиром.', category: 'other-drinks' },
-  { name: 'Апельсиновый фреш', price: '390 ₽', weight: '330 мл', desc: 'Свежевыжатый сок из сладких апельсинов.', category: 'other-drinks' },
-  { name: 'Стакан молока', price: '60 ₽', weight: '200 мл', desc: 'Свежее цельное молоко.', category: 'other-drinks' }
-];
-
 // Document Elements
-const menuGrid = document.getElementById('menu-grid');
-const tabButtons = document.querySelectorAll('.tab-btn');
 const burgerBtn = document.querySelector('.burger-btn');
 const mobileDrawer = document.querySelector('.mobile-drawer');
 const drawerOverlay = document.querySelector('.drawer-overlay');
@@ -116,59 +32,7 @@ let isPanning = false;
 let startX = 0, startY = 0;
 let translateX = 0, translateY = 0;
 
-// 1. Render Menu Items
-function renderMenu(category = 'all') {
-  if (!menuGrid) return;
-  
-  menuGrid.innerHTML = '';
-  
-  const filteredItems = category === 'all' 
-    ? menuData 
-    : menuData.filter(item => item.category === category);
-    
-  if (filteredItems.length === 0) {
-    menuGrid.innerHTML = '<div class="no-items">Позиции не найдены</div>';
-    return;
-  }
-  
-  filteredItems.forEach((item, index) => {
-    const itemCard = document.createElement('div');
-    itemCard.className = 'menu-item-card';
-    itemCard.style.animationDelay = `${index * 0.03}s`;
-    
-    itemCard.innerHTML = `
-      <div class="menu-item-header">
-        <h3 class="menu-item-title">${item.name}</h3>
-        <span class="menu-item-price">${item.price}</span>
-      </div>
-      <div class="menu-item-meta">
-        <span class="menu-item-weight">${item.weight}</span>
-      </div>
-      <p class="menu-item-desc">${item.desc}</p>
-    `;
-    
-    menuGrid.appendChild(itemCard);
-  });
-}
-
-// 2. Setup Category Tabs
-tabButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    tabButtons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    
-    // Add subtle click scale animation
-    btn.style.transform = 'scale(0.95)';
-    setTimeout(() => {
-      btn.style.transform = 'none';
-    }, 100);
-    
-    const category = btn.getAttribute('data-category');
-    renderMenu(category);
-  });
-});
-
-// 3. Mobile Navigation Drawer
+// 1. Mobile Navigation Drawer
 function openDrawer() {
   mobileDrawer.classList.add('open');
   drawerOverlay.classList.add('open');
@@ -471,51 +335,9 @@ function resetReviewAutoplay() {
   startReviewAutoplay();
 }
 
-// 10. Mobile Menu Catalog Toggle
-function initMenuToggle() {
-  const btnToggleInteractiveMenu = document.getElementById('btn-toggle-interactive-menu');
-  const menuSection = document.getElementById('menu');
-
-  if (btnToggleInteractiveMenu && menuSection) {
-    btnToggleInteractiveMenu.addEventListener('click', () => {
-      const isExpanded = menuSection.classList.toggle('menu-expanded');
-      if (isExpanded) {
-        btnToggleInteractiveMenu.textContent = 'Свернуть интерактивное меню';
-        btnToggleInteractiveMenu.classList.remove('btn-primary');
-        btnToggleInteractiveMenu.classList.add('btn-secondary');
-        
-        const tabsWrapper = document.querySelector('.menu-tabs-wrapper');
-        if (tabsWrapper) {
-          const headerOffset = 80;
-          const elementPosition = tabsWrapper.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }
-      } else {
-        btnToggleInteractiveMenu.textContent = 'Открыть интерактивное меню';
-        btnToggleInteractiveMenu.classList.add('btn-primary');
-        btnToggleInteractiveMenu.classList.remove('btn-secondary');
-        
-        const headerOffset = 80;
-        const elementPosition = menuSection.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-    });
-  }
-}
-
 // Initialize on load
 document.addEventListener('DOMContentLoaded', () => {
-  renderMenu('all');
   initReviewsSlider();
-  initMenuToggle();
   
   // Style tag for body initial styles
   document.body.classList.add('js-loaded');

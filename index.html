@@ -41,7 +41,7 @@
           </ul>
         </nav>
 
-        <a href="#menu" class="header-btn btn btn-outline">Посмотреть цены</a>
+        <a href="#menu" class="header-btn btn btn-outline">Посмотреть меню</a>
 
         <button class="burger-btn" aria-label="Открыть меню">
           <span></span>
@@ -60,7 +60,7 @@
         <li><a href="#reviews" class="drawer-link">Отзывы</a></li>
         <li><a href="#contacts" class="drawer-link">Контакты</a></li>
       </ul>
-      <a href="#menu" class="drawer-btn btn btn-primary">Посмотреть цены</a>
+      <a href="#menu" class="drawer-btn btn btn-primary">Посмотреть меню</a>
     </div>
     <div class="drawer-overlay"></div>
 
@@ -68,7 +68,7 @@
     <main>
       <!-- Hero Section -->
       <section id="hero" class="hero-section">
-        <div class="hero-bg" style="background-image: linear-gradient(rgba(18, 16, 14, 0.75), rgba(18, 16, 14, 0.85)), url('./images/about-2.jpg');"></div>
+        <div class="hero-bg" style="background-image: linear-gradient(rgba(18, 16, 14, 0.75), rgba(18, 16, 14, 0.85)), url('./images/hero-bg.jpg');"></div>
         <div class="hero-content container">
           <span class="hero-subtitle fade-in">Specialty кофейня в Санкт-Петербурге</span>
           <h1 class="hero-title fade-in">Espresso Bike</h1>
@@ -119,10 +119,10 @@
 
           <div class="about-images-content reveal">
             <div class="image-wrapper main-img">
-              <img src="./images/about-1.jpg" alt="Espresso Bike Interior" />
+              <img src="./images/about-main.jpg" alt="Espresso Bike Interior" />
             </div>
             <div class="image-wrapper secondary-img">
-              <img src="./images/about-2.jpg" alt="Coffee Brewing" />
+              <img src="./images/about-secondary.jpg" alt="Coffee Brewing" />
             </div>
             <div class="experience-badge">
               <span class="badge-title">С 2013</span>
@@ -141,33 +141,11 @@
             <p class="section-subtitle">Выбирайте любимые напитки из Specialty-кофемашины или наши фирменные домашние завтраки и горячие блюда.</p>
             
             <div class="menu-view-options">
-              <button id="btn-toggle-interactive-menu" class="btn btn-primary btn-menu-toggle">
-                Открыть интерактивное меню
-              </button>
-              <button id="btn-show-original-menu" class="btn btn-secondary">
+              <button id="btn-show-original-menu" class="btn btn-primary">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
                 Посмотреть печатное меню
               </button>
             </div>
-          </div>
-
-          <!-- Category Navigation Tabs -->
-          <div class="menu-tabs-wrapper reveal">
-            <div class="menu-tabs">
-              <button class="tab-btn active" data-category="all">Все меню</button>
-              <button class="tab-btn" data-category="black-coffee">Черный кофе</button>
-              <button class="tab-btn" data-category="milk-coffee">Кофе с молоком</button>
-              <button class="tab-btn" data-category="tea-matcha">Чай и Матча</button>
-              <button class="tab-btn" data-category="breakfasts">Завтраки</button>
-              <button class="tab-btn" data-category="mains-salads">Горячее и Салаты</button>
-              <button class="tab-btn" data-category="sandwich-rolls">Сэндвичи и Роллы</button>
-              <button class="tab-btn" data-category="other-drinks">Смузи и другое</button>
-            </div>
-          </div>
-
-          <!-- Menu Grid -->
-          <div id="menu-grid" class="menu-grid reveal">
-            <!-- Items rendered dynamically via JS -->
           </div>
 
           <!-- Extra Notes Banner -->

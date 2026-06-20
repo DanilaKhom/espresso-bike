@@ -656,141 +656,6 @@ ul {
   margin-bottom: 40px;
 }
 
-.btn-menu-toggle {
-  display: none;
-}
-
-.menu-tabs-wrapper {
-  overflow-x: auto;
-  padding-bottom: 15px;
-  margin-bottom: 45px;
-}
-
-/* Custom scrollbar for tabs */
-.menu-tabs-wrapper::-webkit-scrollbar {
-  height: 4px;
-}
-.menu-tabs-wrapper::-webkit-scrollbar-track {
-  background: var(--color-bg-surface);
-}
-.menu-tabs-wrapper::-webkit-scrollbar-thumb {
-  background: var(--color-border);
-  border-radius: 4px;
-}
-
-.menu-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  width: max-content;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
-.tab-btn {
-  background: var(--color-bg-surface);
-  border: 1px solid var(--color-border-light);
-  color: var(--color-text-body);
-  font-family: var(--font-sans);
-  font-size: 14px;
-  font-weight: 500;
-  padding: 12px 24px;
-  border-radius: 30px;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all var(--transition-normal);
-}
-
-.tab-btn:hover {
-  border-color: var(--color-primary);
-  color: var(--color-text-title);
-}
-
-.tab-btn.active {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
-  color: #0c0b0a;
-  font-weight: 600;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
-}
-
-/* Menu Grid */
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
-
-@media (max-width: 992px) {
-  .menu-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-
-.menu-item-card {
-  background-color: var(--color-bg-surface);
-  border: 1px solid var(--color-border-light);
-  padding: 25px;
-  border-radius: 8px;
-  transition: all var(--transition-normal);
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.4s forwards cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.menu-item-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--color-primary);
-  box-shadow: var(--shadow-md), 0 0 15px rgba(212, 175, 55, 0.05);
-}
-
-.menu-item-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 15px;
-  margin-bottom: 8px;
-}
-
-.menu-item-title {
-  font-size: 19px;
-  font-weight: 500;
-}
-
-.menu-item-price {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--color-primary);
-  white-space: nowrap;
-}
-
-.menu-item-meta {
-  margin-bottom: 12px;
-}
-
-.menu-item-weight {
-  font-size: 13px;
-  color: var(--color-text-muted);
-  text-transform: lowercase;
-}
-
-.menu-item-desc {
-  font-size: 14px;
-  color: var(--color-text-muted);
-  font-weight: 300;
-  line-height: 1.5;
-}
-
 /* Menu Notes Banner */
 .menu-notes {
   margin-top: 60px;
@@ -1482,9 +1347,6 @@ ul {
    Collapse Interactive Menu Catalog (max-width: 768px)
    ========================================================================== */
 @media (max-width: 768px) {
-  .btn-menu-toggle {
-    display: inline-flex;
-  }
   .menu-view-options {
     display: flex;
     flex-direction: column;
@@ -1495,24 +1357,6 @@ ul {
   }
   .menu-view-options .btn {
     width: 100%;
-  }
-  
-  /* Hide catalog by default on mobile/tablet */
-  .menu-tabs-wrapper,
-  #menu-grid,
-  .menu-notes {
-    display: none;
-  }
-  
-  /* Reveal catalog when menu-expanded class is applied */
-  .menu-section.menu-expanded .menu-tabs-wrapper {
-    display: block;
-  }
-  .menu-section.menu-expanded #menu-grid {
-    display: grid;
-  }
-  .menu-section.menu-expanded .menu-notes {
-    display: block;
   }
 }
 
@@ -1624,27 +1468,7 @@ ul {
     font-size: 8px;
   }
 
-  /* Menu Tabs & Items */
-  .tab-btn {
-    padding: 10px 18px;
-    font-size: 13px;
-  }
-  .menu-tabs-wrapper {
-    margin-bottom: 30px;
-  }
-  .menu-item-card {
-    padding: 20px 15px;
-  }
-  .menu-item-title {
-    font-size: 17px;
-  }
-  .menu-item-price {
-    font-size: 16px;
-  }
-  .menu-item-desc {
-    font-size: 13px;
-    line-height: 1.4;
-  }
+
 
   /* Menu Notes */
   .menu-notes {
