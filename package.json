@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node C:\\\\Users\\\\khomy\\\\.gemini\\\\antigravity\\\\brain\\\\6ec987be-9448-438f-8f70-b264846f79b6\\\\scratch\\\\copy_script.js",
+    "build": "vite build && node copy_script.js",
     "preview": "vite preview"
   },
   "devDependencies": {
