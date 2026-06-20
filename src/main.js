@@ -168,6 +168,30 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft') prevLightboxImage();
 });
 
+// Swipe logic for Lightbox on mobile
+let lightboxTouchStartX = 0;
+let lightboxTouchEndX = 0;
+
+menuLightbox.addEventListener('touchstart', (e) => {
+  lightboxTouchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+menuLightbox.addEventListener('touchend', (e) => {
+  lightboxTouchEndX = e.changedTouches[0].screenX;
+  handleLightboxSwipe();
+}, { passive: true });
+
+function handleLightboxSwipe() {
+  if (zoomScale > 1) return; // Ignore swipe if zoomed in (user is panning)
+  
+  const swipeDistance = lightboxTouchEndX - lightboxTouchStartX;
+  if (swipeDistance < -50) {
+    nextLightboxImage();
+  } else if (swipeDistance > 50) {
+    prevLightboxImage();
+  }
+}
+
 // 8. Zoom and Drag/Pan Controls for Lightbox Image
 function updateImageTransform() {
   lightboxImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${zoomScale})`;
