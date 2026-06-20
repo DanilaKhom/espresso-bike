@@ -471,10 +471,51 @@ function resetReviewAutoplay() {
   startReviewAutoplay();
 }
 
+// 10. Mobile Menu Catalog Toggle
+function initMenuToggle() {
+  const btnToggleInteractiveMenu = document.getElementById('btn-toggle-interactive-menu');
+  const menuSection = document.getElementById('menu');
+
+  if (btnToggleInteractiveMenu && menuSection) {
+    btnToggleInteractiveMenu.addEventListener('click', () => {
+      const isExpanded = menuSection.classList.toggle('menu-expanded');
+      if (isExpanded) {
+        btnToggleInteractiveMenu.textContent = 'Свернуть интерактивное меню';
+        btnToggleInteractiveMenu.classList.remove('btn-primary');
+        btnToggleInteractiveMenu.classList.add('btn-secondary');
+        
+        const tabsWrapper = document.querySelector('.menu-tabs-wrapper');
+        if (tabsWrapper) {
+          const headerOffset = 80;
+          const elementPosition = tabsWrapper.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      } else {
+        btnToggleInteractiveMenu.textContent = 'Открыть интерактивное меню';
+        btnToggleInteractiveMenu.classList.add('btn-primary');
+        btnToggleInteractiveMenu.classList.remove('btn-secondary');
+        
+        const headerOffset = 80;
+        const elementPosition = menuSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  }
+}
+
 // Initialize on load
 document.addEventListener('DOMContentLoaded', () => {
   renderMenu('all');
   initReviewsSlider();
+  initMenuToggle();
   
   // Style tag for body initial styles
   document.body.classList.add('js-loaded');

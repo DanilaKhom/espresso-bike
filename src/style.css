@@ -656,6 +656,10 @@ ul {
   margin-bottom: 40px;
 }
 
+.btn-menu-toggle {
+  display: none;
+}
+
 .menu-tabs-wrapper {
   overflow-x: auto;
   padding-bottom: 15px;
@@ -1472,6 +1476,44 @@ ul {
 
 .reviews-action {
   margin-top: 20px;
+}
+
+/* ==========================================================================
+   Collapse Interactive Menu Catalog (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .btn-menu-toggle {
+    display: inline-flex;
+  }
+  .menu-view-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    max-width: 320px;
+    margin: 0 auto 30px auto;
+  }
+  .menu-view-options .btn {
+    width: 100%;
+  }
+  
+  /* Hide catalog by default on mobile/tablet */
+  .menu-tabs-wrapper,
+  #menu-grid,
+  .menu-notes {
+    display: none;
+  }
+  
+  /* Reveal catalog when menu-expanded class is applied */
+  .menu-section.menu-expanded .menu-tabs-wrapper {
+    display: block;
+  }
+  .menu-section.menu-expanded #menu-grid {
+    display: grid;
+  }
+  .menu-section.menu-expanded .menu-notes {
+    display: block;
+  }
 }
 
 /* ==========================================================================
