@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./images/logo-white.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espresso Bike — Кофейня и магазин свежеобжаренного кофе в Санкт-Петербурге</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Свежеобжаренный кофе собственной обжарки в зернах и уютная Specialty кофейня на Казанской 7 в Санкт-Петербурге. Завтраки весь день, сытная кухня, свежий хлеб и десерты." />
+    <meta name="keywords" content="Espresso Bike, эспрессо байк, кофейня санкт-петербург, свежеобжаренный кофе спб, Specialty кофе, завтраки весь день спб, казанская 7" />
+    <meta property="og:title" content="Espresso Bike — Кофейня и свежеобжаренный кофе в Санкт-Петербурге" />
+    <meta property="og:description" content="Свежеобжаренный кофе собственной обжарки и уютная кофейня на Казанской 7. Завтраки весь день, сытная кухня, свежий хлеб и десерты." />
+    <meta property="og:image" content="./images/about-1.jpg" />
+    <meta property="og:url" content="https://eb-coffee.ru" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+  </head>
+  <body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+      <div class="header-container">
+        <a href="#hero" class="logo">
+          <img src="./images/logo-white.png" alt="Espresso Bike Logo" class="logo-img" />
+        </a>
+        
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#about" class="nav-link">О нас</a></li>
+            <li><a href="#menu" class="nav-link">Меню и цены</a></li>
+            <li><a href="#reviews" class="nav-link">Отзывы</a></li>
+            <li><a href="#contacts" class="nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <a href="#menu" class="header-btn btn btn-outline">Посмотреть цены</a>
+
+        <button class="burger-btn" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer">
+      <div class="drawer-close" aria-label="Закрыть меню">&times;</div>
+      <ul class="drawer-list">
+        <li><a href="#about" class="drawer-link">О нас</a></li>
+        <li><a href="#menu" class="drawer-link">Меню и цены</a></li>
+        <li><a href="#reviews" class="drawer-link">Отзывы</a></li>
+        <li><a href="#contacts" class="drawer-link">Контакты</a></li>
+      </ul>
+      <a href="#menu" class="drawer-btn btn btn-primary">Посмотреть цены</a>
+    </div>
+    <div class="drawer-overlay"></div>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="hero-section">
+        <div class="hero-bg" style="background-image: linear-gradient(rgba(18, 16, 14, 0.75), rgba(18, 16, 14, 0.85)), url('./images/about-2.jpg');"></div>
+        <div class="hero-content container">
+          <span class="hero-subtitle fade-in">Specialty кофейня в Санкт-Петербурге</span>
+          <h1 class="hero-title fade-in">Espresso Bike</h1>
+          <p class="hero-desc fade-in">Место, где любят кофе и людей. Зерно собственной обжарки, завтраки весь день, домашний ремесленный хлеб и десерты ручной работы.</p>
+          <div class="hero-actions fade-in">
+            <a href="#menu" class="btn btn-primary">Изучить меню</a>
+            <a href="#contacts" class="btn btn-secondary">Как нас найти</a>
+          </div>
+        </div>
+        <div class="hero-scroll-indicator">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <span>Листайте ниже</span>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about-section section">
+        <div class="container grid-2">
+          <div class="about-text-content reveal">
+            <span class="section-tag">Наша история</span>
+            <h2 class="section-title">О кофейне</h2>
+            <p class="paragraph">
+              Наша история началась в <strong>2013 году</strong> с любви к кофе и кофейни на базе велосипеда, который мы назвали <strong>Espresso Bike</strong>. Нами двигала идея готовить качественный specialty кофе, желание постоянно развиваться в профессии и делиться знаниями с нашими гостями. 
+            </p>
+            <p class="paragraph">
+              Первая кофейня на базе велосипеда просуществовала 2 года, а уже в <strong>2014 году</strong> мы открыли наши двери в самом центре Санкт-Петербурга, на Казанской улице.
+            </p>
+            <p class="paragraph">
+              Сегодня <strong>Espresso Bike</strong> — это полноценное заведение на каждый день с вкусным и правильным кофе и сытной авторской кухней. Мы сами выпекаем ремесленный хлеб для наших блюд и готовим десерты ручной работы на нашей кондитерской витрине. Мы варим Specialty кофе на зерне от лучших обжарщиков (Tasty Coffee и Avgust Coffee), а также развиваем собственное производство.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <span class="highlight-number">13+</span>
+                <span class="highlight-label">Лет опыта обжарки</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-number">100%</span>
+                <span class="highlight-label">Specialty арабика</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-number">Своя</span>
+                <span class="highlight-label">Выпечка и десерты</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-images-content reveal">
+            <div class="image-wrapper main-img">
+              <img src="./images/about-1.jpg" alt="Espresso Bike Interior" />
+            </div>
+            <div class="image-wrapper secondary-img">
+              <img src="./images/about-2.jpg" alt="Coffee Brewing" />
+            </div>
+            <div class="experience-badge">
+              <span class="badge-title">С 2013</span>
+              <span class="badge-text">Готовим для вас</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu Section -->
+      <section id="menu" class="menu-section section">
+        <div class="container">
+          <div class="menu-header text-center reveal">
+            <span class="section-tag">Свежий прайс-лист</span>
+            <h2 class="section-title">Меню и цены</h2>
+            <p class="section-subtitle">Выбирайте любимые напитки из Specialty-кофемашины или наши фирменные домашние завтраки и горячие блюда.</p>
+            
+            <div class="menu-view-options">
+              <button id="btn-show-original-menu" class="btn btn-secondary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                Посмотреть печатное меню
+              </button>
+            </div>
+          </div>
+
+          <!-- Category Navigation Tabs -->
+          <div class="menu-tabs-wrapper reveal">
+            <div class="menu-tabs">
+              <button class="tab-btn active" data-category="all">Все меню</button>
+              <button class="tab-btn" data-category="black-coffee">Черный кофе</button>
+              <button class="tab-btn" data-category="milk-coffee">Кофе с молоком</button>
+              <button class="tab-btn" data-category="tea-matcha">Чай и Матча</button>
+              <button class="tab-btn" data-category="breakfasts">Завтраки</button>
+              <button class="tab-btn" data-category="mains-salads">Горячее и Салаты</button>
+              <button class="tab-btn" data-category="sandwich-rolls">Сэндвичи и Роллы</button>
+              <button class="tab-btn" data-category="other-drinks">Смузи и другое</button>
+            </div>
+          </div>
+
+          <!-- Menu Grid -->
+          <div id="menu-grid" class="menu-grid reveal">
+            <!-- Items rendered dynamically via JS -->
+          </div>
+
+          <!-- Extra Notes Banner -->
+          <div class="menu-notes reveal">
+            <div class="notes-card">
+              <div class="note-col">
+                <h3>Дополнительные настройки напитков</h3>
+                <ul>
+                  <li>Приготовить на безлактозном молоке или сливках <span class="price-tag">+30 ₽</span></li>
+                  <li>Приготовить на кокосовом, фундучном или овсяном молоке <span class="price-tag">+70 ₽</span></li>
+                </ul>
+              </div>
+              <div class="note-col">
+                <h3>Свежие десерты и хлеб</h3>
+                <p>Все десерты от нашего шеф-кондитера представлены на витрине. Наш ремесленный хлеб для сэндвичей и бриошей мы печем самостоятельно каждый день.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews Section -->
+      <section id="reviews" class="reviews-section section">
+        <div class="container">
+          <div class="reviews-header text-center reveal">
+            <span class="section-tag">Мнения гостей</span>
+            <h2 class="section-title">Что говорят о нас</h2>
+            <div class="yandex-rating">
+              <span class="rating-value">4.8</span>
+              <span class="rating-stars">★★★★★</span>
+              <span class="rating-label">на Яндекс Картах</span>
+              <span class="award-badge" title="Награда Яндекс Карт">Хорошее место 2026</span>
+            </div>
+          </div>
+
+          <div class="reviews-carousel-wrapper reveal">
+            <div class="reviews-carousel">
+              <!-- Slide 1 -->
+              <div class="review-slide active">
+                <div class="review-card">
+                  <div class="review-quote">“</div>
+                  <p class="review-text">Очень атмосферное место с кирпичными сводами в цоколе БЦ. Кофе просто невероятный, особенно фильтр! Брала бенедикт с лососем на бриоши — это восторг. Обязательно вернусь.</p>
+                  <div class="review-author">
+                    <div class="author-avatar">А</div>
+                    <div class="author-info">
+                      <h4>Анастасия К.</h4>
+                      <div class="author-rating">★★★★★</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="review-slide">
+                <div class="review-card">
+                  <div class="review-quote">“</div>
+                  <p class="review-text">Отличный specialty кофе, ребята знают свое дело. Уютное место в самом центре, здорово посидеть с ноутбуком. Вход не сразу найдешь, но это делает кофейню еще более ламповой.</p>
+                  <div class="review-author">
+                    <div class="author-avatar">А</div>
+                    <div class="author-info">
+                      <h4>Алексей М.</h4>
+                      <div class="author-rating">★★★★★</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="review-slide">
+                <div class="review-card">
+                  <div class="review-quote">“</div>
+                  <p class="review-text">Очень милая и уютная кофейня. Порадовало, что они dog-friendly — пустили с собакой без проблем. Сырники из фермерского творога безумно нежные, а бариста очень дружелюбные!</p>
+                  <div class="review-author">
+                    <div class="author-avatar">Е</div>
+                    <div class="author-info">
+                      <h4>Екатерина Д.</h4>
+                      <div class="author-rating">★★★★★</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="review-slide">
+                <div class="review-card">
+                  <div class="review-quote">“</div>
+                  <p class="review-text">Пожалуй, один из лучших альтернативных кофе в районе Казанской (классный V60). Приятная музыка, отличный выбор зерна свежей обжарки домой и очень вкусный ремесленный хлеб.</p>
+                  <div class="review-author">
+                    <div class="author-avatar">Д</div>
+                    <div class="author-info">
+                      <h4>Дмитрий П.</h4>
+                      <div class="author-rating">★★★★★</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-btn prev-btn" aria-label="Предыдущий отзыв">&#10094;</button>
+            <button class="carousel-btn next-btn" aria-label="Следующий отзыв">&#10095;</button>
+
+            <!-- Carousel Dots -->
+            <div class="carousel-dots">
+              <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
+              <span class="dot" data-slide="3"></span>
+            </div>
+          </div>
+
+          <div class="reviews-action text-center reveal">
+            <a href="https://yandex.ru/maps/org/espresso_bayk/128658215202/reviews/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              Читать все отзывы на Яндекс Картах
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacts Section -->
+      <section id="contacts" class="contacts-section section">
+        <div class="container grid-2">
+          <div class="contacts-info-content reveal">
+            <span class="section-tag">Ждем вас в гости</span>
+            <h2 class="section-title">Контакты и адрес</h2>
+            <p class="paragraph">Мы находимся в самом центре Санкт-Петербурга, в шаговой доступности от Казанского собора. Вход через бизнес-центр «Кваренги».</p>
+
+            <div class="contact-details">
+              <div class="detail-card">
+                <div class="detail-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="detail-text">
+                  <h3>Адрес кофейни</h3>
+                  <p>Санкт-Петербург, ул. Казанская, д. 7<br><small>(цокольный этаж, вход через БЦ «Кваренги»)</small></p>
+                </div>
+              </div>
+
+              <div class="detail-card">
+                <div class="detail-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="detail-text">
+                  <h3>Телефон</h3>
+                  <p><a href="tel:+79325058563" class="hover-link">+7 (932) 505-85-63</a></p>
+                </div>
+              </div>
+
+              <div class="detail-card">
+                <div class="detail-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <div class="detail-text">
+                  <h3>График работы</h3>
+                  <p>Будние дни (Пн-Пт): <strong>09:00 — 21:00</strong><br>Выходные (Сб-Вс): <strong>10:00 — 21:00</strong></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contacts-actions">
+              <a href="tel:+79325058563" class="btn btn-primary">Позвонить в кофейню</a>
+            </div>
+          </div>
+
+          <div class="contacts-map reveal">
+            <div class="map-wrapper">
+              <!-- Yandex Interactive Map Widget Embed -->
+              <iframe src="https://yandex.ru/map-widget/v1/?ll=30.323565%2C59.932454&mode=search&oid=1208929341&ol=biz&z=16.5" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-logo-desc">
+          <img src="./images/logo-white.png" alt="Espresso Bike" class="footer-logo" />
+          <p>Качественный Specialty кофе собственной обжарки, ремесленный хлеб и завтраки в центре Санкт-Петербурга.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Ссылки</h4>
+          <ul>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#menu">Меню и цены</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <p>Copyright &copy; 2013-2026 Кофейня Espresso Bike. Все права защищены.</p>
+          <p class="developer-credit">Powered by Espresso Bike</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Lightbox Modal for Original Menu Images -->
+    <div id="menu-lightbox" class="lightbox">
+      <div class="lightbox-overlay"></div>
+      <button class="lightbox-close" aria-label="Закрыть">&times;</button>
+      
+      <div class="lightbox-container">
+        <button class="lightbox-prev" aria-label="Предыдущее изображение">&#10094;</button>
+        
+        <div class="lightbox-image-box">
+          <img id="lightbox-img" src="./images/menu-1.png" alt="Оригинальное меню Espresso Bike" />
+          <div class="lightbox-caption">Страница 1 из 2. Используйте колесико мыши или жесты для увеличения.</div>
+        </div>
+        
+        <button class="lightbox-next" aria-label="Следующее изображение">&#10095;</button>
+      </div>
+
+      <div class="lightbox-zoom-controls">
+        <button id="zoom-in" title="Увеличить">+</button>
+        <button id="zoom-out" title="Уменьшить">-</button>
+        <button id="zoom-reset" title="Сбросить масштаб">1:1</button>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Наверх">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+    </button>
+
+    <script src="./src/main.js"></script>
+  </body>
+</html>
