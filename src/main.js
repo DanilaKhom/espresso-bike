@@ -1,4 +1,5 @@
 // Document Elements
+const header = document.querySelector('.header');
 const burgerBtn = document.querySelector('.burger-btn');
 const mobileDrawer = document.querySelector('.mobile-drawer');
 const drawerOverlay = document.querySelector('.drawer-overlay');
@@ -88,6 +89,14 @@ window.addEventListener('scroll', () => {
   
   if (scrollProgress) {
     scrollProgress.style.width = scrolled + '%';
+  }
+  
+  if (header) {
+    if (winScroll > 40) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
   }
   
   if (backToTopBtn) {
