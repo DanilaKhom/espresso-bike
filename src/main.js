@@ -107,7 +107,7 @@ backToTopBtn.addEventListener('click', () => {
 });
 
 // 6. Reveal on Scroll (Intersection Observer)
-const revealElements = document.querySelectorAll('.reveal');
+const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -116,11 +116,20 @@ const revealObserver = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
+  threshold: 0.08,
+  rootMargin: '0px 0px -40px 0px'
 });
 
 revealElements.forEach(el => revealObserver.observe(el));
+
+// 6b. Hero parallax on scroll
+const heroBg = document.querySelector('.hero-bg');
+if (heroBg) {
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    heroBg.style.setProperty('--parallax-y', `${scrollY * 0.3}px`);
+  }, { passive: true });
+}
 
 // 7. Lightbox Modal logic (Original printed menu viewer)
 function openLightbox(index = 0) {
