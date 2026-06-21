@@ -60,7 +60,7 @@ drawerClose.addEventListener('click', closeDrawer);
 drawerOverlay.addEventListener('click', closeDrawer);
 drawerLinks.forEach(link => link.addEventListener('click', closeDrawer));
 
-// 4. Smooth Anchor Scrolling
+// 2. Smooth Anchor Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
@@ -81,7 +81,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// 5. Scroll Progress and Back-to-Top Button
+// 3. Scroll Progress and Back-to-Top Button
 window.addEventListener('scroll', () => {
   const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -115,7 +115,7 @@ backToTopBtn.addEventListener('click', () => {
   });
 });
 
-// 6. Reveal on Scroll (Intersection Observer)
+// 4. Reveal on Scroll (Intersection Observer)
 const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -131,7 +131,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealElements.forEach(el => revealObserver.observe(el));
 
-// 6b. Hero parallax on scroll
+// 5. Hero Parallax on Scroll
 const heroBg = document.querySelector('.hero-bg');
 if (heroBg) {
   window.addEventListener('scroll', () => {
@@ -139,8 +139,7 @@ if (heroBg) {
     heroBg.style.setProperty('--parallax-y', `${scrollY * 0.3}px`);
   }, { passive: true });
 }
-
-// 7. Lightbox Modal logic (Original printed menu viewer)
+// 6. Lightbox Modal (Original Printed Menu Viewer)
 function openLightbox(index = 0) {
   currentMenuImageIndex = index;
   updateLightboxImage();
@@ -210,7 +209,7 @@ function handleLightboxSwipe() {
   }
 }
 
-// 8. Zoom and Drag/Pan Controls for Lightbox Image
+// 6b. Zoom and Drag/Pan Controls for Lightbox Image
 function updateImageTransform() {
   lightboxImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${zoomScale})`;
 }
@@ -263,7 +262,7 @@ window.addEventListener('mouseup', () => {
   if (lightboxImg) lightboxImg.style.cursor = 'grab';
 });
 
-// 9. Reviews Slider / Carousel
+// 7. Reviews Slider / Carousel
 let reviewSlides = [];
 let reviewDots = [];
 let currentReviewIndex = 0;
