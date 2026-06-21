@@ -653,7 +653,130 @@ ul {
 
 .menu-view-options {
   margin-top: -20px;
+  margin-bottom: 50px;
+}
+
+/* Dream Coffee Style Catalog */
+.menu-grid-wrapper {
+  margin-bottom: 70px;
+}
+
+.menu-category-title {
+  font-size: 26px;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  text-align: center;
+  color: #d2ab67; /* Sand Gold accent like Dream Coffee */
   margin-bottom: 40px;
+  position: relative;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.menu-category-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background-color: rgba(210, 171, 103, 0.4);
+}
+
+.menu-food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.food-card {
+  background-color: #121110;
+  border: 1px solid rgba(210, 171, 103, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(210, 171, 103, 0.25);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.food-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.food-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: none !important; /* Keep original dish color, don't apply grayscale */
+  transition: transform var(--transition-normal);
+}
+
+.food-card:hover .food-img {
+  transform: scale(1.05);
+}
+
+.food-info {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.food-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.food-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text-title);
+  line-height: 1.35;
+}
+
+.food-weight {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+.food-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text-body);
+  font-weight: 300;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.food-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 15px;
+}
+
+.food-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #d2ab67; /* Dream Coffee gold */
 }
 
 /* Menu Notes Banner */
@@ -1631,5 +1754,27 @@ ul {
     margin-left: 0;
     width: 100%;
     margin-top: 4px;
+  }
+  
+  /* Mobile food menu grid overrides */
+  .menu-category-title {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+  .menu-food-grid {
+    gap: 20px;
+  }
+  .food-card {
+    border-radius: 10px;
+  }
+  .food-img-wrapper {
+    height: 180px;
+  }
+  .food-info {
+    padding: 18px;
+  }
+  .food-desc {
+    margin-bottom: 15px;
+    font-size: 13.5px;
   }
 }
